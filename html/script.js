@@ -2904,7 +2904,7 @@ function displaySil() {
     let new_html="";
     let type = selected.icaoType ? selected.icaoType : 'ZZZZ';
     let hex = selected.icao.toUpperCase();
-    new_html = "<img id='silhouette' width='"+ 151 * globalScale + "' src='aircraft_sil/" + type + ".png' />";
+    new_html = "<img id='silhouette' width='"+ 151 * globalScale + "' src='https://doc8643.com/aircraft/" + type + ".jpg' />";
     setPhotoHtml(new_html);
     selected.icao.toUpperCase();
 }

@@ -8,7 +8,7 @@ trap 'echo "[ERROR] Error in line $LINENO when executing: $BASH_COMMAND"' ERR
 renice 10 $$
 
 srcdir=/run/readsb
-repo="https://github.com/wiedehopf/tar1090"
+repo="https://github.com/TLeconte/tar1090"
 db_repo="https://github.com/wiedehopf/tar1090-db"
 
 # optional command line options for this install script
@@ -169,8 +169,8 @@ elif [[ -f /run/dump1090-fa/aircraft.json ]] ; then
     srcdir=/run/dump1090-fa
 elif [[ -f /run/readsb/aircraft.json ]]; then
     srcdir=/run/readsb
-elif [[ -f /run/adsbexchange-feed/aircraft.json ]]; then
-    srcdir=/run/adsbexchange-feed
+elif [[ -f /run/airplanes-feed/aircraft.json ]]; then
+    srcdir=/run/airplanes-feed
 elif [[ -f /run/dump1090/aircraft.json ]]; then
     srcdir=/run/dump1090
 elif [[ -f /run/dump1090-mutability/aircraft.json ]]; then
@@ -182,7 +182,7 @@ elif [[ -f /run/shm/aircraft.json ]]; then
 else
     echo --------------
     echo FATAL: could not find aircraft.json in any of the usual places!
-    echo "checked these: /run/readsb /run/dump1090-fa /run/dump1090 /run/dump1090-mutability /run/adsbexchange-feed /run/skyaware978"
+    echo "checked these: /run/readsb /run/dump1090-fa /run/dump1090 /run/dump1090-mutability /run/airplanes-feed /run/skyaware978"
     echo --------------
     echo "You need to have a decoder installed first, readsb is recommended:"
     echo "https://github.com/wiedehopf/adsb-scripts/wiki/Automatic-installation-for-readsb"
